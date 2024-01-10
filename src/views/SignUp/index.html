@@ -8,7 +8,7 @@
 </head>
 <body class="flex items-center justify-center h-screen bg-gray-200">
     <section class="w-full max-w-md">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" aria-label="Signup Form">
+        <form id="signup-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" aria-label="Signup Form">
             <fieldset>
                 <legend class="text-xl font-bold mb-4">Signup</legend>
 
@@ -25,7 +25,7 @@
                             <span class="ml-2">Male</span>
                         </label>
                         <label class="inline-flex items-center ml-6">
-                            <input type="radio" name="gender" value="female" class="form-radio" id="gender-input">
+                            <input type="radio" name="gender" value="female" class="form-radio">
                             <span class="ml-2">Female</span>
                         </label>
                     </div>
@@ -62,5 +62,7 @@
             </fieldset>
         </form>
     </section>
+
+    <script type="module" src="./script.ts"></script>
 </body>
 </html>
