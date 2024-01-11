@@ -1,19 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MediCare</title>
+    <title>Healthcare Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
   </head>
-  <body>
-    <div id="app">
-      <h1>Medicare</h1>
-      <a href="./src/views/Login/index.html">login</a>
-      <br />
-      <a href="./src/views/SignUp/index.html">signup</a>
-    </div>
+  <body class="bg-gray-100">
+    <header class="bg-white shadow">
+      <nav class="bg-white px-4 py-2 shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+          <!-- Logo section -->
+          <div class="flex items-center">
+            <img
+              src="./src/assets/logo.svg"
+              alt="MediCare Logo"
+              class="h-8 mr-2"
+            />
 
-    <script type="module" src="./src/main.ts"></script>
+            <span class="font-semibold text-xl tracking-tight">MediCare</span>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-1">
+            <a
+              href="#"
+              class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+              >Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+              >Contact Us</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+              >Help</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+              >Blogs</a
+            >
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <a
+              href="./src/views/SignUp/index.html"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >Sign Up</a
+            >
+            <a
+              href="./src/views/Login/index.html"
+              class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+              >Log In</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 pt-16">
+      <section
+        class="mb-32 text-center md:text-left flex flex-wrap items-center"
+      >
+        <div class="md:w-1/2">
+          <h1 class="text-4xl font-bold mb-5">
+            Providing Quality Healthcare For A Brighter And Healthy Future
+          </h1>
+          <p class="mb-5">
+            At our hospital, we are dedicated to providing exceptional medical
+            care to our patients and their families. Our experienced team of
+            medical professionals, cutting-edge technology, and compassionate
+            approach make us a leader in the healthcare industry.
+          </p>
+        </div>
+        <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+          <img src="./src/assets/hero.svg" alt="Doctor" class="rounded-full" />
+        </div>
+      </section>
+
+      <section class="bg-white p-8 shadow-lg rounded-lg">
+        <h2 class="text-2xl font-bold mb-5">Find A Doctor</h2>
+        <form class="flex flex-col md:flex-row md:items-center">
+          <input
+            type="text"
+            placeholder="Name"
+            class="mb-2 md:mb-0 md:mr-2 flex-1 px-4 py-2 rounded border border-gray-300"
+          />
+          <select
+            class="mb-2 md:mb-0 md:mr-2 flex-1 px-4 py-2 rounded border border-gray-300"
+          >
+            <option>Speciality</option>
+            <option>Speciality 1</option>
+            <option>Speciality 2</option>
+          </select>
+
+          <button
+            class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 flex-none"
+          >
+            Search
+          </button>
+        </form>
+      </section>
+
+      <footer class="bg-teal-900 text-black">
+        <div
+          class="max-w-6xl mx-auto px-4 py-6 lg:flex lg:justify-between lg:items-center"
+        >
+          <div class="mb-6 lg:mb-0">
+            <img
+              src="./src/assets/logo.svg"
+              alt="Healthcare Logo"
+              class="h-8 mb-2"
+            />
+            <p class="text-sm">
+              Copyright © 2022 Healthcare | All Rights Reserved
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-flow-col lg:auto-cols-max"
+          >
+            <div>
+              <h6 class="uppercase font-bold mb-4">Product</h6>
+              <ul class="text-sm space-y-2">
+                <li><a href="#" class="hover:underline">Features</a></li>
+                <li><a href="#" class="hover:underline">Pricing</a></li>
+                <li><a href="#" class="hover:underline">Case studies</a></li>
+                <li><a href="#" class="hover:underline">Reviews</a></li>
+                <li><a href="#" class="hover:underline">Updates</a></li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="uppercase font-bold mb-4">Company</h6>
+              <ul class="text-sm space-y-2">
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline">Contact us</a></li>
+                <li><a href="#" class="hover:underline">Careers</a></li>
+                <li><a href="#" class="hover:underline">Culture</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="uppercase font-bold mb-4">Support</h6>
+              <ul class="text-sm space-y-2">
+                <li><a href="#" class="hover:underline">Getting started</a></li>
+                <li><a href="#" class="hover:underline">Help center</a></li>
+                <li><a href="#" class="hover:underline">Server status</a></li>
+                <li><a href="#" class="hover:underline">Report a bug</a></li>
+                <li><a href="#" class="hover:underline">Chat support</a></li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="uppercase font-bold mb-4">Follow us</h6>
+              <div class="flex space-x-4">
+                <a href="#" class="hover:text-gray-400"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="hover:text-gray-400"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="hover:text-gray-400"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="hover:text-gray-400"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="hover:text-gray-400"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
