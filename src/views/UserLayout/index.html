@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex flex-col md:flex-row">
+      <!-- Sidebar -->
+      <div class="bg-white w-full md:w-1/4 lg:w-1/6 p-5 border-r">
+        <div class="flex items-center space-x-2 mb-5">
+          <div
+            class="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200 text-lg font-semibold"
+          >
+            JD
+          </div>
+          <div class="font-medium">
+            John Doe<br />
+            <span class="text-sm text-gray-600">Doctor</span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li class="mb-3">
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Home</a
+              >
+            </li>
+            <li class="mb-3">
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Appointment</a
+              >
+            </li>
+            <li class="mb-3">
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Apply Doctor</a
+              >
+            </li>
+            <li class="mb-3">
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Content Area -->
+      <div class="flex-1 p-5">
+        <div class="bg-white p-6 rounded shadow-sm">
+          <!-- Profile Header -->
+          <div class="border-b pb-3 mb-5">
+            <h1 class="text-lg font-semibold">Profile</h1>
+          </div>
+          <!-- Profile Content -->
+          <!-- Add your content here -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

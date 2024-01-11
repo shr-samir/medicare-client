@@ -25,7 +25,14 @@ loginForm?.addEventListener('submit', async (e) => {
       },
       method: 'POST',
     });
-    console.log(response);
+    // console.log(response);
+    
+    const accessToken = response.data.accessToken;
+    localStorage.setItem('accessToken', accessToken);
+
+    if (response.status === 200) {
+      window.location.href = '../UserLayout/index.html';
+    }
     
   } catch (e) {
     console.error(e);
