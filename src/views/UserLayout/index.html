@@ -6,23 +6,24 @@
     <title>Responsive Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gray-100">
-    <div class="flex flex-col md:flex-row">
-      <!-- Sidebar -->
-      <div class="bg-white w-full md:w-1/4 lg:w-1/6 p-5 border-r">
-        <div class="flex items-center space-x-2 mb-5">
+  <body class="bg-gray-100 box-border">
+    <main class="main flex flex-col md:flex-row h-lvh">
+
+      <!----------------------- Sidebar ---------------------------->
+      <div class="sidebar bg-white w-full md:w-1/4 lg:w-1/6 m-5 p-5 border-r">
+        <div class="userRole flex items-center space-x-2 mb-5">
           <div
             class="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200 text-lg font-semibold"
           >
             JD
           </div>
-          <div class="font-medium">
+          <div id="fullname" class="font-medium">
             John Doe<br />
             <span class="text-sm text-gray-600">Doctor</span>
           </div>
         </div>
-        <nav>
-          <ul>
+        <nav class="userRights py-10 ">
+          <ul class="flex flex-col gap-40">
             <li class="mb-3">
               <a
                 href="#"
@@ -55,8 +56,8 @@
         </nav>
       </div>
 
-      <!-- Content Area -->
-      <div class="flex-1 p-5">
+      <!----------------------- Except Sidebar ---------------------------->
+      <div class="exceptSidebar flex-1 p-5">
         <div class="bg-white p-6 rounded shadow-sm">
           <!-- Profile Header -->
           <div class="border-b pb-3 mb-5">
@@ -66,6 +67,7 @@
           <!-- Add your content here -->
         </div>
       </div>
-    </div>
+    </main>
+    <script src="./script.ts"></script>
   </body>
 </html>
