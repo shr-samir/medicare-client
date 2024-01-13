@@ -7,7 +7,10 @@ module.exports = {
         custom: ['Roboto Condensed', 'Poppins', 'sans-serif'],
       },
       colors: {
-        primary: '#2a3c6c',
+        primary: '#007E85',
+        secondary: '#6EAB36',
+        alternate: '#ECECEC',
+        gradient: '#007E85',
       },
     },
   },
