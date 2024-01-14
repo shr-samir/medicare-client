@@ -48,4 +48,8 @@ signUpForm?.addEventListener('submit', async (e) => {
   } catch (e) {
     console.error(e);
   }
+
+  window.location.href = '/src/views/Login/index.html';
 });
+
+
