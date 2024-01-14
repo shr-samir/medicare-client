@@ -14,8 +14,12 @@ window.addEventListener('load', async () => {
   const fullName = localStorage.getItem('fullName') as string;
   const role = localStorage.getItem('role') as string;
 
-  const userRole = document.getElementById('userRole') as HTMLElement;
-  userRole.textContent = role;
+
+  const setFullName = document.getElementById('fullname') as HTMLElement;
+  setFullName.textContent = fullName.charAt(0).toUpperCase() + fullName.slice(1);
+
+  const setUserRole = document.getElementById('userRole') as HTMLElement;
+  setUserRole.textContent = role;
 
   const doctorInfo = data.doctors;
   doctorInfo.forEach((doctor: any) => {
