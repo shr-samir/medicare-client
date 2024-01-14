@@ -12,17 +12,17 @@
       <!----------------------- Sidebar ---------------------------->
       <section
         id="sidebar"
-        class="bg-primary w-full md:w-1/4 lg:w-1/6 m-5 p-5 border-r rounded-xl flex flex-col gap-2 sticky"
+        class="bg-slate-200 w-full md:w-1/4 lg:w-1/6 m-5 p-5 border-r rounded-xl flex flex-col gap-2 sticky"
       >
-        <div id="userRole" class="userRole flex items-center space-x-2 mb-5">
+        <div id="userBrief" class="userBrief flex items-center space-x-2 mb-5">
           <div
-            class="rounded-full h-10 w-10 flex items-center justify-center bg-gray-200 text-lg font-semibold"
+            class="rounded-full h-10 w-10 flex items-center justify-center bg-black text-white text-lg font-semibold"
           >
             JD
           </div>
           <div id="fullname" class="font-medium">
             John Doe<br />
-            <span class="text-sm text-gray-600">User</span>
+            <span id="userRole" class="text-sm text-gray-600"></span>
           </div>
         </div>
         <nav id="userRights" class="userRights py-10">
@@ -40,7 +40,7 @@
                 />
               </svg>
               <a
-                href="#"
+                href="../UserLayout/index.html"
                 class="text-gray-700 text-xl hover:text-gray-900 transition duration-150 ease-in-out"
                 >Dashboard</a
               >
@@ -83,9 +83,40 @@
                 </g>
               </svg>
               <a
-                href="#"
+                href="../DoctorApplyForm/index.html"
                 class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
                 >Apply Doctor</a
+              >
+            </li>
+
+            <li
+              id="profile"
+              class="profile mb-3 flex gap-2 text-xl items-center"
+            >
+              <svg
+                style="enable-background: new 0 0 24 24"
+                version="1.1"
+                viewBox="0 0 24 24"
+                width="24px"
+                height="24px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="info" />
+                <g id="icons">
+                  <g id="user">
+                    <ellipse cx="12" cy="8" rx="5" ry="6" />
+                    <path
+                      d="M21.8,19.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9s-2.2-0.3-3.2-0.9    C8.3,14.8,7.6,14.7,7,15c-2.2,0.9-3.9,2.4-4.8,4.2C1.5,20.5,2.6,22,4.1,22h15.8C21.4,22,22.5,20.5,21.8,19.1z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Profile</a
               >
             </li>
             <li id="logout" class="logout mb-3 flex gap-2 text-xl items-center">
@@ -111,194 +142,193 @@
                   stroke-width="2"
                 />
               </svg>
-              <a
-                href="#"
+              <button
+                id="logoutBtn"
                 class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
-                >Logout</a
               >
+                Logout
+              </button>
+            
             </li>
           </ul>
-          
         </nav>
       </section>
 
       <!----------------------- Except Sidebar ---------------------------->
       <section id="exceptSidebar" class="flex w-full flex-col p-5 gap-2">
-        <div class="bg-primary p-6 rounded-xl shadow-sm">
-          
+        <div class="p-6 rounded-xl shadow-lg">
           <div class="flex items-center justify-between">
-            <p>Welcome! John</p>
-            <h1 class="text-lg font-semibold">Profile</h1>
+            <p class="text-2xl m-5">Dashboard</p>
           </div>
-        </div>
-        <!-------------------------- Dashboard Doctor Cards  --------------------->
-        <div
-          id="doctor-cards"
-          class="flex justify-between gap-6 flex-wrap bg-white rounded-xl p-6"
-        >
+          <!-------------------------- Dashboard Doctor Cards  --------------------->
           <div
-            id="doctor-card"
-            class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+            id="doctor-cards"
+            class="flex justify-between gap-6 flex-wrap bg-white rounded-xl p-6"
           >
-            <div class="flex items-center p-4">
-              <img
-                class="rounded-full border-2 border-gray-300 h-24 w-24"
-                src="../../assets/doctors/dr-khusbu.jpg"
-                alt="Doctor profile picture"
-              />
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Dr. Khusbu Khetan
-                </h3>
-                <span class="text-gray-600">Dentist</span>
-                <span class="text-gray-600">|</span>
-                <span class="text-gray-600">5+ years</span>
-                <p class="text-gray-600">M.B.B.S., M.D.</p>
-                <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+            <div
+              id="doctor-card"
+              class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+            >
+              <div class="flex items-center p-4">
+                <img
+                  class="rounded-full border-2 border-gray-300 h-24 w-24"
+                  src="../../assets/doctors/dr-khusbu.jpg"
+                  alt="Doctor profile picture"
+                />
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Dr. Khusbu Khetan
+                  </h3>
+                  <span class="text-gray-600">Dentist</span>
+                  <span class="text-gray-600">|</span>
+                  <span class="text-gray-600">5+ years</span>
+                  <p class="text-gray-600">M.B.B.S., M.D.</p>
+                  <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              >
+                Make Appointment
               </div>
             </div>
             <div
-              class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              id="doctor-card"
+              class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
             >
-              Make Appointment
-            </div>
-          </div>
-          <div
-            id="doctor-card"
-            class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div class="flex items-center p-4">
-              <img
-                class="rounded-full border-2 border-gray-300 h-24 w-24"
-                src="../../assets/doctors/dr-khusbu.jpg"
-                alt="Doctor profile picture"
-              />
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Dr. Khusbu Khetan
-                </h3>
-                <span class="text-gray-600">Dentist</span>
-                <span class="text-gray-600">|</span>
-                <span class="text-gray-600">5+ years</span>
-                <p class="text-gray-600">M.B.B.S., M.D.</p>
-                <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+              <div class="flex items-center p-4">
+                <img
+                  class="rounded-full border-2 border-gray-300 h-24 w-24"
+                  src="../../assets/doctors/dr-khusbu.jpg"
+                  alt="Doctor profile picture"
+                />
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Dr. Khusbu Khetan
+                  </h3>
+                  <span class="text-gray-600">Dentist</span>
+                  <span class="text-gray-600">|</span>
+                  <span class="text-gray-600">5+ years</span>
+                  <p class="text-gray-600">M.B.B.S., M.D.</p>
+                  <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              >
+                Make Appointment
               </div>
             </div>
             <div
-              class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              id="doctor-card"
+              class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
             >
-              Make Appointment
-            </div>
-          </div>
-          <div
-            id="doctor-card"
-            class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div class="flex items-center p-4">
-              <img
-                class="rounded-full border-2 border-gray-300 h-24 w-24"
-                src="../../assets/doctors/dr-khusbu.jpg"
-                alt="Doctor profile picture"
-              />
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Dr. Khusbu Khetan
-                </h3>
-                <span class="text-gray-600">Dentist</span>
-                <span class="text-gray-600">|</span>
-                <span class="text-gray-600">5+ years</span>
-                <p class="text-gray-600">M.B.B.S., M.D.</p>
-                <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+              <div class="flex items-center p-4">
+                <img
+                  class="rounded-full border-2 border-gray-300 h-24 w-24"
+                  src="../../assets/doctors/dr-khusbu.jpg"
+                  alt="Doctor profile picture"
+                />
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Dr. Khusbu Khetan
+                  </h3>
+                  <span class="text-gray-600">Dentist</span>
+                  <span class="text-gray-600">|</span>
+                  <span class="text-gray-600">5+ years</span>
+                  <p class="text-gray-600">M.B.B.S., M.D.</p>
+                  <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              >
+                Make Appointment
               </div>
             </div>
-            <div
-              class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
-            >
-              Make Appointment
-            </div>
-          </div>
 
-          <div
-            id="doctor-card"
-            class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div class="flex items-center p-4">
-              <img
-                class="rounded-full border-2 border-gray-300 h-24 w-24"
-                src="../../assets/doctors/dr-khusbu.jpg"
-                alt="Doctor profile picture"
-              />
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Dr. Khusbu Khetan
-                </h3>
-                <span class="text-gray-600">Dentist</span>
-                <span class="text-gray-600">|</span>
-                <span class="text-gray-600">5+ years</span>
-                <p class="text-gray-600">M.B.B.S., M.D.</p>
-                <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+            <div
+              id="doctor-card"
+              class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+            >
+              <div class="flex items-center p-4">
+                <img
+                  class="rounded-full border-2 border-gray-300 h-24 w-24"
+                  src="../../assets/doctors/dr-khusbu.jpg"
+                  alt="Doctor profile picture"
+                />
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Dr. Khusbu Khetan
+                  </h3>
+                  <span class="text-gray-600">Dentist</span>
+                  <span class="text-gray-600">|</span>
+                  <span class="text-gray-600">5+ years</span>
+                  <p class="text-gray-600">M.B.B.S., M.D.</p>
+                  <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              >
+                Make Appointment
               </div>
             </div>
-            <div
-              class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
-            >
-              Make Appointment
-            </div>
-          </div>
 
-          <div
-            id="doctor-card"
-            class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div class="flex items-center p-4">
-              <img
-                class="rounded-full border-2 border-gray-300 h-24 w-24"
-                src="../../assets/doctors/dr-khusbu.jpg"
-                alt="Doctor profile picture"
-              />
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Dr. Khusbu Khetan
-                </h3>
-                <span class="text-gray-600">Dentist</span>
-                <span class="text-gray-600">|</span>
-                <span class="text-gray-600">5+ years</span>
-                <p class="text-gray-600">M.B.B.S., M.D.</p>
-                <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+            <div
+              id="doctor-card"
+              class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+            >
+              <div class="flex items-center p-4">
+                <img
+                  class="rounded-full border-2 border-gray-300 h-24 w-24"
+                  src="../../assets/doctors/dr-khusbu.jpg"
+                  alt="Doctor profile picture"
+                />
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Dr. Khusbu Khetan
+                  </h3>
+                  <span class="text-gray-600">Dentist</span>
+                  <span class="text-gray-600">|</span>
+                  <span class="text-gray-600">5+ years</span>
+                  <p class="text-gray-600">M.B.B.S., M.D.</p>
+                  <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              >
+                Make Appointment
               </div>
             </div>
-            <div
-              class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
-            >
-              Make Appointment
-            </div>
-          </div>
 
-          <div
-            id="doctor-card"
-            class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div class="flex items-center p-4">
-              <img
-                class="rounded-full border-2 border-gray-300 h-24 w-24"
-                src="../../assets/doctors/dr-khusbu.jpg"
-                alt="Doctor profile picture"
-              />
-              <div class="ml-4">
-                <h3 class="text-lg font-semibold text-gray-900">
-                  Dr. Khusbu Khetan
-                </h3>
-                <span class="text-gray-600">Dentist</span>
-                <span class="text-gray-600">|</span>
-                <span class="text-gray-600">5+ years</span>
-                <p class="text-gray-600">M.B.B.S., M.D.</p>
-                <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
-              </div>
-            </div>
             <div
-              class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              id="doctor-card"
+              class="w-[340px] bg-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
             >
-              Make Appointment
+              <div class="flex items-center p-4">
+                <img
+                  class="rounded-full border-2 border-gray-300 h-24 w-24"
+                  src="../../assets/doctors/dr-khusbu.jpg"
+                  alt="Doctor profile picture"
+                />
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Dr. Khusbu Khetan
+                  </h3>
+                  <span class="text-gray-600">Dentist</span>
+                  <span class="text-gray-600">|</span>
+                  <span class="text-gray-600">5+ years</span>
+                  <p class="text-gray-600">M.B.B.S., M.D.</p>
+                  <!-- <p class="text-gray-900">Rs. 500 per Visit</p> -->
+                </div>
+              </div>
+              <div
+                class="flex justify-center items-center text-white bg-primary hover:bg-blue-200 m-4 text-sm font-semibold px-6 py-2 rounded-lg cursor-pointer"
+              >
+                Make Appointment
+              </div>
             </div>
           </div>
         </div>

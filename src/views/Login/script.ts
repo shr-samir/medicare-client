@@ -26,14 +26,22 @@ loginForm?.addEventListener('submit', async (e) => {
       method: 'POST',
     });
     // console.log(response);
-    
+
     const accessToken = response.data.accessToken;
     localStorage.setItem('accessToken', accessToken);
+
+    const refreshToken = response.data.refreshToken;
+    localStorage.setItem('refreshToken', refreshToken);
+
+    const fullName = response.data.fullName;
+    localStorage.setItem('fullName', fullName);
+
+    const role = response.data.role;
+    localStorage.setItem('role', role);
 
     if (response.status === 200) {
       window.location.href = '../UserLayout/index.html';
     }
-    
   } catch (e) {
     console.error(e);
   }

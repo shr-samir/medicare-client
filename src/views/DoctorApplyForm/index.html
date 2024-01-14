@@ -8,99 +8,255 @@
 
     <title>Doctor Apply Form</title>
   </head>
-  <body class="flex items-center justify-center">
-    <div class="bg-slate-200 p-6 rounded-xl shadow-lg max-w-md w-full">
-      <form class="flex flex-col">
-        <h2 class="text-xl font-bold mb-6 text-gray-700">Doctor Profile</h2>
-
-        <label
-          for="education"
-          class="block mb-2 text-sm font-medium text-gray-700"
-          >Education</label
-        >
-        <input
-          type="text"
-          id="education"
-          name="education"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
-          placeholder="M.B.B.S., M.D.,etc."
-        />
-
-        <label
-          for="specialization"
-          class="block mb-2 text-sm font-medium text-gray-700"
-          >Specialization</label
-        >
-        <input
-          type="text"
-          id="specialization"
-          name="specialization"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
-          placeholder="Cardiology, Neurology, etc."
-        />
-
-        <label
-          for="experience"
-          class="block mb-2 text-sm font-medium text-gray-700"
-          >Experience (Years)</label
-        >
-        <input
-          type="number"
-          id="experience"
-          name="experience"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
-          placeholder="5, 10, 15, etc."
-        />
-
-        <label for="fee" class="block mb-2 text-sm font-medium text-gray-700"
-          >Fee Per Consult (Rs)</label
-        >
-        <input
-          type="text"
-          id="fee"
-          name="fee"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
-          placeholder="300, 400, 500, etc."
-        />
-
-        <div class="flex gap-4 mb-4">
-          <div class="flex-1">
-            <label
-              for="start-time"
-              class="block mb-2 text-sm font-medium text-gray-700"
-              >Start Time</label
-            >
-            <input
-              type="time"
-              id="start-time"
-              name="start-time"
-              class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            />
+  <body class="box-border font-custom">
+    <main class="main flex flex-col md:flex-row h-lvh relative">
+      <!----------------------- Sidebar ---------------------------->
+      <section
+        id="sidebar"
+        class="bg-slate-200 w-full md:w-1/4 lg:w-1/6 m-5 p-5 border-r rounded-xl flex flex-col gap-2 sticky"
+      >
+        <div id="userRole" class="userRole flex items-center space-x-2 mb-5">
+          <div
+            class="rounded-full h-10 w-10 flex items-center justify-center bg-black text-white text-lg font-semibold"
+          >
+            JD
           </div>
-          <div class="flex-1">
-            <label
-              for="end-time"
-              class="block mb-2 text-sm font-medium text-gray-700"
-              >End Time</label
-            >
-            <input
-              type="time"
-              id="end-time"
-              name="end-time"
-              class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            />
+          <div id="fullname" class="font-medium">
+            John Doe<br />
+            <span class="text-sm text-gray-600">User</span>
           </div>
         </div>
+        <nav id="userRights" class="userRights py-10">
+          <ul class="flex flex-col gap-6">
+            <li class="mb-3 flex gap-2 items-center">
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 13h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1zm-1 7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v4zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v7zm1-10h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z"
+                  fill="#000000"
+                />
+              </svg>
+              <a
+                href="../UserLayout/index.html"
+                class="text-gray-700 text-xl hover:text-gray-900 transition duration-150 ease-in-out"
+                >Dashboard</a
+              >
+            </li>
+            <li class="mb-3 flex gap-2 text-xl items-center">
+              <svg
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title />
+                <path
+                  d="M18,4H17V3a1,1,0,0,0-2,0V4H9V3A1,1,0,0,0,7,3V4H6A3,3,0,0,0,3,7V18a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V7A3,3,0,0,0,18,4ZM8,18a1,1,0,1,1,1-1A1,1,0,0,1,8,18Zm0-4a1,1,0,1,1,1-1A1,1,0,0,1,8,14Zm4,4a1,1,0,1,1,1-1A1,1,0,0,1,12,18Zm0-4a1,1,0,1,1,1-1A1,1,0,0,1,12,14Zm4,0a1,1,0,1,1,1-1A1,1,0,0,1,16,14Zm3-4H5V7A1,1,0,0,1,6,6H7V7A1,1,0,0,0,9,7V6h6V7a1,1,0,0,0,2,0V6h1a1,1,0,0,1,1,1Z"
+                  fill="#000000"
+                />
+              </svg>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Appointment</a
+              >
+            </li>
+            <li class="mb-3 flex gap-2 text-xl items-center">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title />
+                <g id="Stethoscope">
+                  <path
+                    d="M416.6226,147.9609a58.6358,58.6358,0,1,0,58.6357,58.6348A58.6354,58.6354,0,0,0,416.6226,147.9609Zm-.001,85.2676a26.6367,26.6367,0,1,1,26.6367-26.6328A26.6636,26.6636,0,0,1,416.6216,233.2285Z"
+                  />
+                  <path
+                    d="M401.1353,287.7227v55.1152A105.1841,105.1841,0,0,1,296.0728,447.9063c-55.6778,0-101.9766-44.3672-104.8467-99.625,69.3095-7.879,123.0693-67.6973,123.0713-137.8008V65.127a15.5055,15.5055,0,0,0-15.4883-15.4883h-34.166a32,32,0,1,0-.001,30.9746h18.6836V210.4805a107.8062,107.8062,0,1,1-215.6123,0V80.6133H86.397a32,32,0,1,0-.002-30.9746H52.229A15.5052,15.5052,0,0,0,36.7417,65.127V210.4805c.001,70.2754,53.96,130.1543,123.4834,137.8437,2.916,72.3047,63.1367,130.5508,135.8477,130.5508,75.0078,0,136.0341-61.0234,136.0341-136.0371V287.7227a80.3817,80.3817,0,0,1-30.9716,0Z"
+                    fill="#000000"
+                  />
+                </g>
+              </svg>
+              <a
+                href="../DoctorApplyForm/index.html"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Apply Doctor</a
+              >
+            </li>
 
-        <button
-          type="submit"
-          class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-        >
-          Submit
-        </button>
-      </form>
-    </div>
+            <li
+              id="profile"
+              class="profile mb-3 flex gap-2 text-xl items-center"
+            >
+              <svg
+                style="enable-background: new 0 0 24 24"
+                version="1.1"
+                viewBox="0 0 24 24"
+                width="24px"
+                height="24px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="info" />
+                <g id="icons">
+                  <g id="user">
+                    <ellipse cx="12" cy="8" rx="5" ry="6" />
+                    <path
+                      d="M21.8,19.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9s-2.2-0.3-3.2-0.9    C8.3,14.8,7.6,14.7,7,15c-2.2,0.9-3.9,2.4-4.8,4.2C1.5,20.5,2.6,22,4.1,22h15.8C21.4,22,22.5,20.5,21.8,19.1z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Profile</a
+              >
+            </li>
+            <li id="logout" class="logout mb-3 flex gap-2 text-xl items-center">
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H15"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M19 12L15 8M19 12L15 16M19 12H9"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-900 transition duration-150 ease-in-out"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
 
-    <script src="./script.ts"></script>
+      <!----------------------- Except Sidebar ---------------------------->
+      <section id="exceptSidebar" class="flex w-full flex-col p-5 gap-2">
+        <div class="p-6 rounded-xl shadow-lg">
+          <div class="flex items-center justify-between">
+            <p class="text-2xl m-5">Apply Doctor</p>
+          </div>
+          <!-------------------------- Apply doctor form  --------------------->
+          <div class="bg-slate-200 p-6 rounded-xl shadow-lg max-w-md w-full">
+            <form id="doctor-apply-form" class="flex flex-col">
+              
+
+              <!-- <label
+                for="education"
+                class="block mb-2 text-sm font-medium text-gray-700"
+                >Education</label
+              >
+              <input
+                type="text"
+                id="education"
+                name="education"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+                placeholder="M.B.B.S., M.D.,etc."
+              /> -->
+
+              <label
+                for="specialization"
+                class="block mb-2 text-sm font-medium text-gray-700"
+                >Specialization</label
+              >
+              <input
+                type="text"
+                id="specialization"
+                name="specialization"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+                placeholder="Cardiology, Neurology, etc."
+              />
+
+              <label
+                for="experience"
+                class="block mb-2 text-sm font-medium text-gray-700"
+                >Experience (Years)</label
+              >
+              <input
+                type="number"
+                id="experience"
+                name="experience"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+                placeholder="5, 10, 15, etc."
+              />
+
+              <label
+                for="fee"
+                class="block mb-2 text-sm font-medium text-gray-700"
+                >Fee Per Consult (Rs)</label
+              >
+              <input
+                type="text"
+                id="fee"
+                name="fee"
+                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+                placeholder="300, 400, 500, etc."
+              />
+
+              <div class="flex gap-4 mb-4">
+                <div class="flex-1">
+                  <label
+                    for="start-time"
+                    class="block mb-2 text-sm font-medium text-gray-700"
+                    >Start Time</label
+                  >
+                  <input
+                    type="time"
+                    id="start-time"
+                    name="start-time"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  />
+                </div>
+                <div class="flex-1">
+                  <label
+                    for="end-time"
+                    class="block mb-2 text-sm font-medium text-gray-700"
+                    >End Time</label
+                  >
+                  <input
+                    type="time"
+                    id="end-time"
+                    name="end-time"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./script.ts"></script>
   </body>
 </html>
